@@ -1,0 +1,152 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--LightGray);
+}
+ul {
+    list-style: none;
+}
+.parent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 0 rgba(128, 128, 128, 0.438);
+}
+.childOne {
+    background-color: white;
+    padding: 40px;
+}
+.childOne h3 {
+    color: #44b4b5;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.childOne h4 {
+    color: var(--BrightYellow);
+    margin-bottom: 10px;
+    font-size: 16.5px;
+}
+.childOne p {
+    font-size: 14px;
+    color: rgba(153, 153, 153, 0.733);
+    line-height: 1.6;
+    font-weight: 500;
+}
+.childTwo {
+    display: flex;
+    width: 100%;
+}
+.One, .Two {
+    flex-basis: 50%;
+    padding: 30px 40px;
+}
+.One {
+    background-color: #2bb3b1;
+}
+.One h4 {
+    color: white;
+    margin-bottom: 16px;
+}
+.One .price {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.384);
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+.One .price span {
+    color: white;
+    font-size: 28px;
+    padding-right: 10px;
+    font-weight: 600;
+}
+.One p {
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.One button {
+    width: 100%;
+    background-color: var(--BrightYellow);
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+.Two {
+    background-color: #4abebd;
+}
+.Two h4 {
+    margin-bottom: 16px;
+    color: white;
+}
+ul li {
+    margin-bottom: 4px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.808);
+}
+@media (max-width: 768px) {
+    .parent {
+        width: 320px;
+    }
+    .childOne {
+        padding: 25px;
+    }
+    .childOne h3 {
+        font-size: 22px;
+    }
+    .childOne h4 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .childOne p {
+        font-size: 14px;
+    }
+    .childTwo {
+        flex-direction: column;
+    }
+    .One, .Two {
+        padding: 25px;
+    }
+    .One h4 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+    .One .price {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .One .price span {
+        font-size: 32px;
+    }
+    .One p {
+        font-size: 16px;
+        margin-bottom: 27px;
+    }
+    .Two h4 {
+        font-size: 19px;
+    }
+    .Two ul li {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+}
